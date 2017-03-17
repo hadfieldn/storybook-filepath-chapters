@@ -72,7 +72,7 @@ The above example results in the following Storybook [navigational tree](https:/
   // app/components/widgets/labels/_stories.js
 
   // Storybook
-  Demo components
+  Demo Components
     └──[widgets]
           ├──[buttons]
           │     ├──Button1
