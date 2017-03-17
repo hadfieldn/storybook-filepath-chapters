@@ -91,7 +91,7 @@ function isStoryFolder(pathComponent, pathComponents, index) {
  * @private
  *
  * Returns a loader that can be passed to Storybook's `configure` function.
- * `requestContext` is a Webpack request context, e.g.:
+ * `reqContext` is a Webpack require context, e.g.:
  *
  *   `const reqContext = require.context('../app/components', true, /.*stories((\.js)|\/(index\.js|*stories\.js))$/i);`
  *
@@ -99,18 +99,18 @@ function isStoryFolder(pathComponent, pathComponents, index) {
  *  and all files in folders with names that end in `stories`.
  *
  * @param storybook
- * @param requestContext
+ * @param reqContext
  * @returns {function()}
  *
  */
-function pathsIntoChaptersLoader(storybook, requestContext, options) {
+function pathsIntoChaptersLoader(storybook, reqContext, options) {
 
   _WrapStoriesInChapters = options.wrapStories;
 
   let book = storybook;
   let currentPath = [];
   return () => {
-    requestContext.keys().forEach((key) => {
+    reqContext.keys().forEach((key) => {
       const pathComponents = getPathComponents(key);
       pathComponents.forEach((pathComponent, index) => {
         const prev = currentPath[index];
@@ -134,7 +134,7 @@ function pathsIntoChaptersLoader(storybook, requestContext, options) {
       });
       _log(`  Processing ${key}`);
       _OpenedNewPathChapter = true;
-      requestContext(key);
+      reqContext(key);
       if (_LastStoriesWereSkipped) {
         _log('  Skipping closure of prior chapter because story was skipped');
         _LastStoriesWereSkipped = false;
@@ -201,13 +201,13 @@ storiesOf.dev = (name, module) => {
  * If `options.wrapStories` is true, each call to `storiesOf()` will be wrapped in a separate chapter.
  *
  * @param {string} storybookName
- * @param {object} requestContext
+ * @param {object} reqContext
  * @param {object} options
  * @param {bool} options.wrapStories
  */
-const loadStorybook = (storybookName, requestContext, options = {}) => {
+const loadStorybook = (storybookName, reqContext, options = {}) => {
   _Stories = kadiraStoriesOf(storybookName, module);
-  const storyLoader = pathsIntoChaptersLoader(_Stories, requestContext, options);
+  const storyLoader = pathsIntoChaptersLoader(_Stories, reqContext, options);
   configure(storyLoader, module);
 };
 
