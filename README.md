@@ -7,9 +7,13 @@ A simple loader for [React Storybook](https://getstorybook.io/) that uses
 [storybook-chapters](https://github.com/sm-react/storybook-chapters) to
 create a hierarchical navigation tree that mirrors your component filesystem.
 
-[Demo](https://hadfieldn.github.io/storybook-filepath-chapters/)
+[Live Demo](https://hadfieldn.github.io/storybook-filepath-chapters/)
 
-![filesystem screenshot](assets/files.png)
+Paths in the filesystem...
+
+<img src="assets/files.png" alt="filesystem screenshot" width="200">
+
+...become branches in the navigational tree:
 
 ![screenshot](assets/demo.gif)
 
