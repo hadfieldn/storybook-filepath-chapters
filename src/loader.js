@@ -22,7 +22,7 @@ let _LastStoriesWereSkipped = false;
 let _OpenedNewPathChapter = false;
 let _WrapStoriesInChapters = false;
 
-const _log = () => console.log;
+const _log = () => {}; //console.log;
 
 
 /**
