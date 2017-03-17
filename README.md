@@ -82,11 +82,13 @@ The above example results in the following Storybook [navigational tree](https:/
                 └──Label2
 ```
 
-## Options
+## API
 
 ```js
 loadStorybook(rootName, requireContext, options);
 ```
+Loads the stories matched by `requireContext` into a hierarchical navigation tree
+corresponding to their locations within the file system.
 - **rootName:** Story name to show at the root of the navigational tree.
 - **requireContext:** A webpack [require context](https://github.com/webpack/docs/wiki/context)
 that identifies the files to be searched for stories. (See the example above.)
