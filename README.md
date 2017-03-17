@@ -99,7 +99,8 @@ By default, all stories in a given folder are wrapped in a single chapter.
 ```js
 storiesOf(storyName, module)
 ```
-Drop-in replacement for the `storiesOf` function provided in `@kadira/storybook`.
+Drop-in replacement for the [`storiesOf`](https://getstorybook.io/docs/react-storybook/basics/writing-stories)
+function provided in `@kadira/storybook`.
 Causes the story to be rendered in a chapter corresponding to its path in the
 filesystem.
 
