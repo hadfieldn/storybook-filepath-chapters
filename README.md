@@ -1,5 +1,8 @@
 # storybook-filepath-chapters
 
+[![npm package](https://badge.fury.io/js/storybook-filepath-chapters.svg)](https://badge.fury.io/js/storybook-filepath-chapters)
+[![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://hadfieldn.github.io/storybook-filepath-chapters/)
+
 A simple loader for [React Storybook](https://getstorybook.io/) that uses
 [storybook-chapters](https://github.com/sm-react/storybook-chapters) to
 create a hierarchical navigation tree that mirrors your filesystem.
@@ -51,7 +54,7 @@ storiesOf('Labels', module)
 ;
 ```
 
-The above examples result in the following Storybook navigational tree:
+The above example results in the following Storybook navigational tree:
 ```js
   // File system:
   // app/components/widgets/butons/_stories.js
@@ -89,4 +92,3 @@ storiesOf.dev(storyName, module)
 ```
 Renders the story in the root navigation view. This can be handy during development to make
 a component immediately accessible.
-```
