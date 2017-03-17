@@ -9,6 +9,8 @@ create a hierarchical navigation tree that mirrors your component filesystem.
 
 [Demo](https://hadfieldn.github.io/storybook-filepath-chapters/)
 
+![filesystem screenshot](assets/files.png)
+
 ![screenshot](assets/demo.gif)
 
 ## Installation
