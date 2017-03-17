@@ -5,7 +5,7 @@
 
 A simple loader for [React Storybook](https://getstorybook.io/) that uses
 [storybook-chapters](https://github.com/sm-react/storybook-chapters) to
-create a hierarchical navigation tree that mirrors your filesystem.
+create a hierarchical navigation tree that mirrors your component filesystem.
 
 [Demo](https://hadfieldn.github.io/storybook-filepath-chapters/)
 
@@ -93,3 +93,8 @@ storiesOf.dev(storyName, module)
 Renders the story into the root navigation pane. This can be handy during development
 in order to make a component immediately accessible, as storybook-chapters
 does not currently retain your navigation selection when the page is refreshed.
+
+
+### Special Thanks
+to [Oleg Proskurin](https://github.com/UsulPro) for a [brilliant solution](https://github.com/sm-react/storybook-chapters) for enabling
+hierarchical navigation in React Storybook.
