@@ -28,7 +28,7 @@ npm add --save-dev storybook-filepath-chapters
 // stories.js
 
 import { loadStorybook } from 'storybook-filepath-chapters';
-const stories = require.context('../app/components', true, /.*stories((\.jsx?)|\/(index\.js|.*?stories\.jsx?))$/i);
+const stories = require.context('../app/components', true, /.*stories((\.jsx?)|\/(index\.jsx?|.*?stories\.jsx?))$/i);
 loadStorybook('Demo Components', stories);
 ```
 
