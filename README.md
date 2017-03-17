@@ -19,7 +19,7 @@ Paths in the filesystem...
 
 ## Installation
 ```sh
-npm add --save-dev storybook-filepath-chapters
+npm install --save-dev storybook-filepath-chapters
 ```
 
 ## Configuration
