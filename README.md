@@ -65,7 +65,7 @@ storiesOf('Labels', module)
 
 ```
 
-The above example results in the following Storybook navigational tree:
+The above example results in the following Storybook [navigational tree](https://hadfieldn.github.io/storybook-filepath-chapters/):
 ```js
   // File system:
   // app/components/widgets/butons/_stories.js
