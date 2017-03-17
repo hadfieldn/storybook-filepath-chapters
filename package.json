@@ -1,0 +1,42 @@
+{
+  "name": "storybook-filepath-chapters",
+  "version": "1.2.0",
+  "description": "React Storybook navigation using storybook-chapters and the filesystem",
+  "main": "lib/loader.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "version": "npm run build && npm run build:storybook && git add -A",
+    "postversion": "git push && git push --tags && rm -rf build/temp",
+    "storybook": "start-storybook -p 9001 -c demo/.storybook",
+    "build:storybook": "build-storybook -c demo/.storybook -o docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadfieldn/storybook-filepath-chapters.git"
+  },
+  "keywords": [
+    "react",
+    "storybook",
+    "chapters",
+    "navigation"
+  ],
+  "author": "Nathan Hadfield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hadfieldn/storybook-filepath-chapters/issues"
+  },
+  "homepage": "https://github.com/hadfieldn/storybook-filepath-chapters#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
+    "@kadira/storybook-addon-options": "^1.0.2",
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "path": "^0.12.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "storybook-chapters": "^0.1.1",
+    "webpack": "^2.2.1"
+  }
+}
