@@ -101,7 +101,7 @@ storiesOf(storyName, module)
 ```
 Drop-in replacement for the [`storiesOf`](https://getstorybook.io/docs/react-storybook/basics/writing-stories)
 function provided in `@kadira/storybook`.
-Causes the story to be rendered in a chapter corresponding to its path in the
+Creates a link to the story in a chapter corresponding to its path in the
 filesystem.
 
 
