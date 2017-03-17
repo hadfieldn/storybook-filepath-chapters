@@ -93,10 +93,20 @@ that identifies the files to be searched for stories. (See the example above.)
 - **options:** (optional) `{ wrapStories: true }` will wrap each call to `storiesOf` in a new chapter.
 By default, all stories in a given folder are wrapped in a single chapter.
 
+
+```js
+storiesOf(storyName, module)
+```
+Drop-in replacement for the `storiesOf` function provided in `@kadira/storybook`.
+Causes the story to be rendered in a chapter corresponding to its path in the
+filesystem.
+
+
 ```js
 storiesOf.skip(storyName, module)
 ```
 Causes the story to be omitted from the navigation tree.
+
 
 ```js
 storiesOf.dev(storyName, module)
