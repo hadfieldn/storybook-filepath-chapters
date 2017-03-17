@@ -85,10 +85,11 @@ By default, all stories in a given folder are wrapped in a single chapter.
 ```js
 storiesOf.skip(storyName, module)
 ```
-Causes the story to be skipped from the navigation tree.
+Causes the story to be omitted from the navigation tree.
 
 ```js
 storiesOf.dev(storyName, module)
 ```
-Renders the story in the root navigation view. This can be handy during development to make
-a component immediately accessible.
+Renders the story into the root navigation pane. This can be handy during development
+in order to make a component immediately accessible, as storybook-chapters
+does not currently retain your navigation selection when the page is refreshed.
