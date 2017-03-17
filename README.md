@@ -93,7 +93,7 @@ corresponding to their locations within the file system.
 - **requireContext:** A webpack [require context](https://github.com/webpack/docs/wiki/context)
 that identifies the files to be searched for stories. (See the example above.)
 - **options:** (optional) `{ wrapStories: true }` will wrap each call to `storiesOf` in a new chapter.
-By default, all stories in a given folder are wrapped in a single chapter.
+By default, all stories in a given folder are wrapped inside one chapter.
 
 
 ```js
