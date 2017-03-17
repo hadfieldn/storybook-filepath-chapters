@@ -73,13 +73,13 @@ The above example results in the following Storybook navigational tree:
 
   // Storybook
   Demo components
-    +--[widgets]
-       |--[buttons]
-       |   |-- Button1
-       |   +-- Button2
-       +--[labels]
-           |-- Label1
-           +-- Label2
+    └──[widgets]
+          ├──[buttons]
+          │     ├──Button1
+          │     └──Button2
+          └──[labels]
+                ├──Label1
+                └──Label2
 ```
 
 ## Options
