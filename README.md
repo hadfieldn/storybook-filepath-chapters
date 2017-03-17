@@ -1,9 +1,10 @@
 # storybook-filepath-chapters
 
-A simple loader for [React Storybook](https://getstorybook.io/) that creates
-a hierarchical navigation tree that mirrors your filesystem.
+A simple loader for [React Storybook](https://getstorybook.io/) that uses
+[storybook-chapters](https://github.com/sm-react/storybook-chapters) to
+create a hierarchical navigation tree that mirrors your filesystem.
 
-[Demo](/docs/index.html)
+[Demo](https://hadfieldn.github.io/storybook-filepath-chapters/)
 
 ![screenshot](assets/demo.gif)
 
@@ -21,6 +22,7 @@ import { loadStorybook } from 'storybook-filepath-chapters';
 const stories = require.context('../app/components', true, /.*stories((\.js)|\/(index\.js|.*?stories\.js))$/i);
 loadStorybook('Demo Components', stories);
 ```
+
 
 **IMPORTANT**: In your stories, import `storiesOf` from `storybook-filepath-chapters` instead
 of `@kadira/storybook`:
@@ -49,24 +51,41 @@ storiesOf('Labels', module)
 ;
 ```
 
+The above examples result in the following Storybook navigational tree:
+```js
+  // File system:
+  // app/components/widgets/butons/_stories.js
+  // app/components/widgets/labels/_stories.js
+
+  // Storybook
+  Demo components
+    +--[widgets]
+       |--[buttons]
+       |   |-- Button1
+       |   +-- Button2
+       +--[labels]
+           |-- Label1
+           +-- Label2
+```
+
 ## Options
 
 ```js
-loadStorybook(*rootName*, *requireContext*, *options*);
+loadStorybook(rootName, requireContext, options);
 ```
-- *rootName*: Story name to show at the root of the navigational tree.
-- *requireContext*: A webpack [require context](https://github.com/webpack/docs/wiki/context)
+- **rootName:** Story name to show at the root of the navigational tree.
+- **requireContext:** A webpack [require context](https://github.com/webpack/docs/wiki/context)
 that identifies the files to be searched for stories. (See the example above.)
-- *options*: `{ wrapStories: true }` -- will wrap each call to `storiesOf` in a new chapter.
+- **options:** (optional) `{ wrapStories: true }` will wrap each call to `storiesOf` in a new chapter.
 By default, all stories in a given folder are wrapped in a single chapter.
 
 ```js
-storiesOf.skip(*storyName*, *module*)
+storiesOf.skip(storyName, module)
 ```
 Causes the story to be skipped from the navigation tree.
 
 ```js
-storiesOf.dev(*storyName*, *module*)
+storiesOf.dev(storyName, module)
 ```
 Renders the story in the root navigation view. This can be handy during development to make
 a component immediately accessible.
