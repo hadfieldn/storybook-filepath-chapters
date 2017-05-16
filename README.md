@@ -3,7 +3,7 @@
 [![npm package](https://badge.fury.io/js/storybook-filepath-chapters.svg)](https://badge.fury.io/js/storybook-filepath-chapters)
 [![Live demo](https://img.shields.io/badge/Live%20Demo-%20Storybook-brightgreen.svg)](https://hadfieldn.github.io/storybook-filepath-chapters/)
 
-A simple loader for [React Storybook](https://getstorybook.io/) that uses
+A simple loader for [Storybook](https://storybooks.js.org/)([source](https://github.com/storybooks/storybook)) that uses
 [storybook-chapters](https://github.com/sm-react/storybook-chapters) to
 create a hierarchical navigation tree that mirrors your component filesystem.
 
@@ -90,7 +90,7 @@ loadStorybook(rootName, requireContext, options);
 Loads the stories matched by `requireContext` into a hierarchical navigation tree
 corresponding to their locations within the file system.
 - **rootName:** Story name to show at the root of the navigational tree.
-- **requireContext:** A webpack [require context](https://github.com/webpack/docs/wiki/context)
+- **requireContext:** A webpack [require context](https://webpack.js.org/guides/dependency-management/#require-context)
 that identifies the files to be searched for stories. (See the example above.)
 - **options:** (optional) `{ wrapStories: true }` will wrap each call to `storiesOf` in a new chapter.
 By default, all stories in a given folder are wrapped inside one chapter.
@@ -99,7 +99,7 @@ By default, all stories in a given folder are wrapped inside one chapter.
 ```js
 storiesOf(storyName, module)
 ```
-Drop-in replacement for the [`storiesOf`](https://getstorybook.io/docs/react-storybook/basics/writing-stories)
+Drop-in replacement for the [`storiesOf`](https://storybooks.js.org/docs/react-storybook/basics/writing-stories/)
 function provided in `@kadira/storybook`.
 Creates a link to the story in a chapter corresponding to its path in the
 filesystem.
