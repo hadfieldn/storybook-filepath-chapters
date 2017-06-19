@@ -1,5 +1,5 @@
-import { storiesOf as kadiraStoriesOf, configure } from '@kadira/storybook';
-import 'storybook-chapters';
+import { storiesOf as originalStoriesOf, configure } from '@storybook/react';
+import '@storybook/addon-chapters';
 
 /**
  * This module provides a method for loading React Storybook stories. It creates a navigational hierarchy
@@ -206,7 +206,7 @@ storiesOf.dev = (name, module) => {
  * @param {bool} options.wrapStories
  */
 const loadStorybook = (storybookName, reqContext, options = {}) => {
-  _Stories = kadiraStoriesOf(storybookName, module);
+  _Stories = originalStoriesOf(storybookName, module);
   const storyLoader = pathsIntoChaptersLoader(_Stories, reqContext, options);
   configure(storyLoader, module);
 };
